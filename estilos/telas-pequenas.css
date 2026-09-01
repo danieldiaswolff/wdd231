@@ -291,25 +291,27 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
-  background-color: rgba(248, 250, 252, 0.12);
-  color: var(--cor-texto-claro);
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.35);
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .redes-sociais a:hover {
   background-color: var(--cor-secundaria);
-  color: var(--cor-primaria);
+  border-color: var(--cor-secundaria);
   transform: translateY(-2px);
 }
 
-.redes-sociais svg {
-  width: 1.35rem;
-  height: 1.35rem;
-  fill: currentColor;
+.redes-sociais img {
+  width: 2rem;
+  height: 2rem;
+  max-width: none;
+  display: block;
+  object-fit: contain;
 }
 
 footer p {
