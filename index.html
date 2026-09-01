@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página inicial do curso WDD 231 de Daniel Wolff, com informações pessoais, localização e certificado em Programação de Computadores e Web."
+    />
+    <meta name="author" content="Daniel Wolff" />
+    <title>WDD 231 | Página Inicial de Daniel Wolff</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/normalize.css" />
+    <link rel="stylesheet" href="estilos/telas-pequenas.css" />
+    <link rel="stylesheet" href="estilos/maior.css" />
+    <script src="scripts/navegacao.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/curso.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho-conteudo">
+        <div class="marca">
+          <img src="imagens/logo.svg" alt="Logotipo do site WDD 231" width="48" height="48" />
+          <span>Daniel Wolff</span>
+        </div>
+        <button
+          id="menu-hamburguer"
+          type="button"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="navegacao-principal"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav id="navegacao-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Página Inicial</a></li>
+          <li><a href="camara/">Projeto da Câmara</a></li>
+          <li><a href="final/">Projeto Final</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Página Inicial</h1>
+
+      <div class="grade-principal">
+        <section class="sobre" aria-labelledby="titulo-sobre">
+          <h2 id="titulo-sobre">Sobre Mim</h2>
+          <p>
+            Olá! Sou Daniel Wolff, estudante de Desenvolvimento de Software na
+            BYU-Idaho. Tenho interesse em desenvolvimento web, interfaces
+            acessíveis e boas práticas de frontend. Este site reúne meus
+            projetos do curso WDD 231 e demonstra HTML, CSS e JavaScript
+            semânticos e responsivos.
+          </p>
+        </section>
+
+        <section class="foto-estudante" aria-labelledby="titulo-foto">
+          <h2 id="titulo-foto">Foto do Estudante</h2>
+          <figure>
+            <img
+              src="imagens/daniel.jpg"
+              alt="Retrato de Daniel Wolff usando óculos e camiseta clara"
+              width="326"
+              height="523"
+              loading="lazy"
+            />
+            <figcaption>Daniel Wolff</figcaption>
+          </figure>
+        </section>
+
+        <section class="certificados" aria-labelledby="titulo-certificados">
+          <h2 id="titulo-certificados">
+            Certificado em Programação de Computadores e Web
+          </h2>
+          <div class="filtros-cursos" role="group" aria-label="Filtrar cursos">
+            <button type="button" class="ativo" data-filtro="todos" aria-pressed="true">
+              Todos os Cursos
+            </button>
+            <button type="button" data-filtro="WDD" aria-pressed="false">
+              Cursos WDD
+            </button>
+            <button type="button" data-filtro="CSE" aria-pressed="false">
+              Cursos CSE
+            </button>
+          </div>
+          <div id="lista-cursos" aria-live="polite"></div>
+          <p id="total-creditos">Total de créditos exibidos: 0</p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="redes-sociais" aria-label="Redes sociais">
+        <a href="https://github.com/danieldiaswolff" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Daniel Wolff">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/danieldiaswolff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Daniel Wolff">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3ZM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5 1.75 1.75 0 0 1 6.5 8.25ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3v-9h2.9v1.2h0a3.2 3.2 0 0 1 2.9-1.6c3.1 0 3.7 2 3.7 4.7Z"/>
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.7 15.5V8.5L15.8 12Z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 3.8A5.2 5.2 0 1 1 6.8 13 5.2 5.2 0 0 1 12 7.8Zm0 2A3.2 3.2 0 1 0 15.2 13 3.2 3.2 0 0 0 12 9.8ZM17.8 6.5a1.2 1.2 0 1 1-1.2 1.2 1.2 1.2 0 0 1 1.2-1.2Z"/>
+          </svg>
+        </a>
+      </div>
+      <p>
+        &copy; <span id="anoAtual"></span> Daniel Wolff | Brasil
+      </p>
+      <p id="ultimaModificacao"></p>
+    </footer>
+  </body>
+</html>
