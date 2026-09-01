@@ -34,9 +34,9 @@
 
   nav a:hover,
   nav a[aria-current="page"] {
-    background-color: rgba(212, 160, 23, 0.15);
+    background-color: var(--cor-secundaria);
     border-color: var(--cor-secundaria);
-    color: var(--cor-secundaria);
+    color: var(--cor-primaria);
   }
 
   .grade-principal {
