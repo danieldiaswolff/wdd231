@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Diretório de empresas associadas à Câmara de Comércio de Joinville, com contatos, sites e níveis de associação."
+    >
+    <meta name="author" content="Daniel Wolff">
+    <title>Diretório | Câmara de Comércio de Joinville</title>
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Diretório | Câmara de Comércio de Joinville">
+    <meta
+      property="og:description"
+      content="Encontre empresas associadas à Câmara de Comércio de Joinville: contatos, sites e níveis de associação em grade ou lista."
+    >
+    <meta property="og:image" content="https://danieldiaswolff.github.io/wdd231/camara/imagens/og-diretorio.jpg">
+    <meta property="og:url" content="https://danieldiaswolff.github.io/wdd231/camara/diretorio.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css">
+    <script src="scripts/navegacao.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/membros.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho-conteudo">
+        <a class="marca" href="index.html">
+          <img src="imagens/logo.png" alt="Logotipo da Câmara de Comércio de Joinville" width="48" height="48">
+          <span>Câmara de Comércio de Joinville</span>
+        </a>
+        <button
+          id="menu-hamburguer"
+          type="button"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="navegacao-principal"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav id="navegacao-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="diretorio.html" aria-current="page">Diretório</a></li>
+          <li><a href="associe-se.html">Associe-se</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Diretório de Associados</h1>
+      <p class="introducao">
+        Conheça empresas e organizações que fortalecem os negócios em Joinville.
+        Alterne entre a visualização em grade ou em lista.
+      </p>
+
+      <div class="controles-exibicao" role="group" aria-label="Alterar visualização do diretório">
+        <button type="button" id="botao-grade" class="ativo" aria-pressed="true">
+          Grade
+        </button>
+        <button type="button" id="botao-lista" aria-pressed="false">
+          Lista
+        </button>
+      </div>
+
+      <section aria-labelledby="titulo-membros">
+        <h2 id="titulo-membros">Membros da Câmara</h2>
+        <div id="membros" class="grade"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="rodape-grade">
+        <div class="rodape-marca">
+          <img src="imagens/logo.png" alt="" width="48" height="48">
+          <p>Câmara de Comércio de Joinville</p>
+        </div>
+        <address>
+          Rua do Príncipe, 123<br>
+          Centro, Joinville - SC, 89201-000<br>
+          <a href="tel:+554734330000">(47) 3433-0000</a><br>
+          <a href="mailto:contato@camarajoinville.org.br">contato@camarajoinville.org.br</a>
+        </address>
+        <nav class="redes-sociais" aria-label="Redes sociais">
+          <a href="https://github.com/danieldiaswolff" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Daniel Wolff">
+            <img src="imagens/icon-github.svg" alt="" width="32" height="32">
+          </a>
+          <a href="https://www.linkedin.com/in/danieldiaswolff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Daniel Wolff">
+            <img src="imagens/icon-linkedin.svg" alt="" width="32" height="32">
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="imagens/icon-youtube.svg" alt="" width="32" height="32">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="imagens/icon-instagram.svg" alt="" width="32" height="32">
+          </a>
+        </nav>
+      </div>
+      <p>
+        &copy; <span id="anoAtual"></span> Daniel Wolff | WDD 231
+      </p>
+      <p id="ultimaModificacao"></p>
+    </footer>
+  </body>
+</html>

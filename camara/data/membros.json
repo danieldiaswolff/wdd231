@@ -1,0 +1,72 @@
+[
+  {
+    "nome": "Metalúrgica Serra Dourada",
+    "endereco": "Rua Otto Boehm, 1480 - Distrito Industrial, Joinville - SC",
+    "telefone": "(47) 3433-2140",
+    "url": "https://www.serradourada.exemplo.br",
+    "imagem": "metalurgica-serra.jpg",
+    "nivelAssociacao": 3,
+    "setor": "Indústria metalúrgica",
+    "descricao": "Fundição e usinagem de componentes industriais para o Norte Catarinense."
+  },
+  {
+    "nome": "Café Colonial Pomerano",
+    "endereco": "Rua XV de Novembro, 412 - Centro, Joinville - SC",
+    "telefone": "(47) 3422-8871",
+    "url": "https://www.cafepomerano.exemplo.br",
+    "imagem": "cafe-pomerano.jpg",
+    "nivelAssociacao": 2,
+    "setor": "Alimentação",
+    "descricao": "Cafeteria e padaria com receitas da imigração germânica da região."
+  },
+  {
+    "nome": "Softvale Tecnologia",
+    "endereco": "Av. Getúlio Vargas, 900 - América, Joinville - SC",
+    "telefone": "(47) 3028-4410",
+    "url": "https://www.softvale.exemplo.br",
+    "imagem": "softvale.jpg",
+    "nivelAssociacao": 3,
+    "setor": "Tecnologia da informação",
+    "descricao": "Sistemas de gestão e soluções digitais para indústrias e comércio."
+  },
+  {
+    "nome": "Mercado Central da América",
+    "endereco": "Rua do Príncipe, 220 - América, Joinville - SC",
+    "telefone": "(47) 3433-1098",
+    "url": "https://www.mercadoamerica.exemplo.br",
+    "imagem": "mercado-america.jpg",
+    "nivelAssociacao": 1,
+    "setor": "Varejo",
+    "descricao": "Empório de produtos locais, hortifrúti e artesanato catarinense."
+  },
+  {
+    "nome": "Hotel Harmonia",
+    "endereco": "Rua Visconde de Taunay, 355 - Centro, Joinville - SC",
+    "telefone": "(47) 3433-5600",
+    "url": "https://www.hotelharmonia.exemplo.br",
+    "imagem": "hotel-harmonia.jpg",
+    "nivelAssociacao": 2,
+    "setor": "Hotelaria",
+    "descricao": "Hospedagem no centro histórico, próxima ao Palácio dos Cristais."
+  },
+  {
+    "nome": "Construtora Atlântico Sul",
+    "endereco": "Rua Blumenau, 1780 - Saguaçu, Joinville - SC",
+    "telefone": "(47) 3025-7733",
+    "url": "https://www.atlanticosul.exemplo.br",
+    "imagem": "atlantico-sul.jpg",
+    "nivelAssociacao": 3,
+    "setor": "Construção civil",
+    "descricao": "Obras residenciais e comerciais com foco em eficiência energética."
+  },
+  {
+    "nome": "Clínica Vida Verde",
+    "endereco": "Av. Rolf Wiest, 277 - Iririú, Joinville - SC",
+    "telefone": "(47) 3433-9182",
+    "url": "https://www.clinicavidaveerde.exemplo.br",
+    "imagem": "clinica-vida.jpg",
+    "nivelAssociacao": 1,
+    "setor": "Saúde",
+    "descricao": "Atendimento multidisciplinar e programas de bem-estar para empresas."
+  }
+]
