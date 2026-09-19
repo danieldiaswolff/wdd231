@@ -378,3 +378,176 @@ address a {
 footer > p {
   margin: 0.35rem 0;
 }
+
+.pagina-inicial main {
+  max-width: none;
+  padding: 0;
+}
+
+.heroi {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-primaria);
+}
+
+.heroi img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+}
+
+.heroi-painel {
+  padding: 1.25rem var(--espacamento) 1.5rem;
+  color: var(--cor-texto-claro);
+}
+
+.heroi-painel h1 {
+  font-family: "Fraunces", Georgia, serif;
+  margin: 0 0 0.6rem;
+  font-size: 1.85rem;
+  color: var(--cor-texto-claro);
+}
+
+.heroi-painel p {
+  margin: 0 0 1rem;
+  max-width: 38rem;
+}
+
+.botao-cta {
+  display: inline-block;
+  width: fit-content;
+  align-self: flex-start;
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria-escura);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+}
+
+.botao-cta:hover {
+  background-color: var(--cor-texto-claro);
+}
+
+.credito-foto {
+  margin: 0.9rem 0 0;
+  font-size: 0.8rem;
+  color: #d7cfc4;
+}
+
+.conteudo-inicio {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 1.5rem var(--espacamento) 3rem;
+}
+
+.grade-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.lista-eventos,
+.grade-destaques {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.cartao-evento,
+.cartao-destaque,
+.secao-tempo {
+  background-color: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 1rem;
+}
+
+.cartao-evento h3,
+.cartao-destaque h3 {
+  margin: 0 0 0.4rem;
+  color: var(--cor-primaria);
+  font-size: 1.15rem;
+}
+
+.cartao-evento p,
+.cartao-destaque p {
+  margin: 0.25rem 0;
+}
+
+.secao-tempo h3 {
+  font-size: 1.05rem;
+  margin: 1.25rem 0 0.75rem;
+  color: var(--cor-primaria);
+}
+
+#tempo-atual {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.temperatura-atual {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--cor-primaria);
+}
+
+#tempo-atual figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+#tempo-atual figcaption {
+  font-weight: 600;
+}
+
+.lista-previsao {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.lista-previsao li {
+  background-color: var(--cor-fundo);
+  border-radius: var(--raio);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.previsao-dia {
+  margin: 0;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+.previsao-temp {
+  margin: 0.2rem 0 0;
+  font-size: 1.25rem;
+}
+
+.credito-clima {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+}
+
+.cartao-destaque {
+  text-align: center;
+}
+
+.cartao-destaque img {
+  width: 100%;
+  aspect-ratio: 1;
+  margin: 0 auto 0.75rem;
+  border-radius: calc(var(--raio) - 0.25rem);
+  object-fit: cover;
+}

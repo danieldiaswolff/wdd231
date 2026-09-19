@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Câmara de Comércio de Joinville: recursos, networking e diretório para empresas de Santa Catarina."
+      content="Bem-vindo à Câmara de Comércio de Joinville: eventos, clima da cidade, empresas em destaque e convite para se associar."
     >
     <meta name="author" content="Daniel Wolff">
     <title>Página Inicial | Câmara de Comércio de Joinville</title>
     <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Página Inicial | Câmara de Comércio de Joinville">
+    <meta
+      property="og:description"
+      content="Eventos, clima e empresas em destaque da Câmara de Comércio de Joinville. Associe-se e fortaleça seus negócios em Santa Catarina."
+    >
+    <meta property="og:image" content="https://danieldiaswolff.github.io/wdd231/camara/imagens/og-inicio.jpg">
+    <meta property="og:url" content="https://danieldiaswolff.github.io/wdd231/camara/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,8 +28,10 @@
     <link rel="stylesheet" href="estilos/maior.css">
     <script src="scripts/navegacao.js" defer></script>
     <script src="scripts/data.js" defer></script>
+    <script src="scripts/clima.js" defer></script>
+    <script src="scripts/destaques.js" defer></script>
   </head>
-  <body>
+  <body class="pagina-inicial">
     <header>
       <div class="cabecalho-conteudo">
         <a class="marca" href="index.html">
@@ -52,18 +61,89 @@
     </header>
 
     <main>
-      <h1>Câmara de Comércio de Joinville</h1>
-      <section class="pagina-resumo">
-        <h2>Bem-vindo</h2>
-        <p>
-          A página inicial completa, com destaques da comunidade, clima e
-          chamadas para ação, será desenvolvida na próxima semana.
-        </p>
-        <p>
-          Por enquanto, visite o
-          <a href="diretorio.html">diretório de associados</a>.
-        </p>
+      <section class="heroi">
+        <img
+          src="imagens/heroi-joinville.jpg"
+          alt="Rua comercial de Joinville com lojas, uma árvore florida e carros estacionados"
+          width="1100"
+          height="499"
+          fetchpriority="high"
+        >
+        <div class="heroi-painel">
+          <h1>Câmara de Comércio de Joinville</h1>
+          <p>
+            Conectamos empresas, talentos e oportunidades para fortalecer os
+            negócios da maior cidade de Santa Catarina.
+          </p>
+          <a class="botao-cta" href="associe-se.html">Associe-se à Câmara</a>
+          <p class="credito-foto">Foto: Nivaldo Cit Filho / Wikimedia Commons</p>
+        </div>
       </section>
+
+      <div class="conteudo-inicio">
+        <div class="grade-info">
+          <section class="secao-eventos" aria-labelledby="titulo-eventos">
+            <h2 id="titulo-eventos">Eventos atuais</h2>
+            <div class="lista-eventos">
+              <article class="cartao-evento">
+                <h3>Café empresarial no Centro</h3>
+                <p>
+                  <time datetime="2026-09-24T08:00">24 de setembro de 2026, 8h</time>
+                </p>
+                <p>
+                  Networking matinal com associados do comércio e da indústria
+                  no salão da Câmara, Rua do Príncipe.
+                </p>
+              </article>
+              <article class="cartao-evento">
+                <h3>Roda de negócios metalmecânicos</h3>
+                <p>
+                  <time datetime="2026-10-02T14:00">2 de outubro de 2026, 14h</time>
+                </p>
+                <p>
+                  Encontros rápidos para parcerias de suprimentos, usinagem e
+                  exportação no Distrito Industrial.
+                </p>
+              </article>
+              <article class="cartao-evento">
+                <h3>Noite de reconhecimento Ouro</h3>
+                <p>
+                  <time datetime="2026-10-15T19:00">15 de outubro de 2026, 19h</time>
+                </p>
+                <p>
+                  Celebração dos associados ouro e prata, com painel sobre
+                  inovação e desenvolvimento local.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="secao-tempo" aria-labelledby="titulo-tempo">
+            <h2 id="titulo-tempo">Tempo em Joinville</h2>
+            <div id="tempo-atual" aria-live="polite">
+              <p>Carregando o tempo atual...</p>
+            </div>
+            <h3>Previsão de 3 dias</h3>
+            <ul id="previsao" class="lista-previsao">
+              <li>Carregando a previsão...</li>
+            </ul>
+            <p class="credito-clima">
+              Dados meteorológicos:
+              <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a>
+            </p>
+          </section>
+        </div>
+
+        <section class="secao-destaques" aria-labelledby="titulo-destaques">
+          <h2 id="titulo-destaques">Empresas em destaque</h2>
+          <p class="introducao">
+            Conheça associados ouro e prata escolhidos aleatoriamente a cada
+            visita. Veja o
+            <a href="diretorio.html">diretório completo</a>.
+          </p>
+          <div id="destaques" class="grade-destaques"></div>
+        </section>
+      </div>
     </main>
 
     <footer>
