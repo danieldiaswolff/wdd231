@@ -592,6 +592,7 @@ footer > p {
 .destaque-dados p {
   margin: 0.2rem 0;
   font-size: 0.85rem;
+  overflow-wrap: anywhere;
 }
 
 .destaque-dados .nivel {
