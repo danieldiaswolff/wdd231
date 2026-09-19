@@ -11,12 +11,39 @@ function capitalizar(texto) {
   return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
-function rotuloDoDia(carimbo) {
+function titulo(texto) {
+  return texto.split(" ").map(capitalizar).join(" ");
+}
+
+function dataIso(carimbo) {
+  return new Date(carimbo * 1000).toLocaleDateString("en-CA", {
+    timeZone: "America/Sao_Paulo",
+  });
+}
+
+function formatarHora(carimbo) {
+  return new Date(carimbo * 1000).toLocaleTimeString("pt-BR", {
+    hour: "numeric",
+    minute: "2-digit",
+    timeZone: "America/Sao_Paulo",
+  });
+}
+
+function rotuloPrevisao(carimbo) {
+  const hoje = new Date().toLocaleDateString("en-CA", {
+    timeZone: "America/Sao_Paulo",
+  });
+
+  if (dataIso(carimbo) === hoje) {
+    return "Hoje";
+  }
+
   const rotulo = new Date(carimbo * 1000).toLocaleDateString("pt-BR", {
     weekday: "long",
     timeZone: "America/Sao_Paulo",
   });
-  return capitalizar(rotulo);
+
+  return rotulo.split("-").map(capitalizar).join("-");
 }
 
 function obterTresDias(lista) {
@@ -32,66 +59,86 @@ function obterTresDias(lista) {
     }
   });
 
-  const hoje = new Date().toLocaleDateString("en-CA", {
-    timeZone: "America/Sao_Paulo",
-  });
-  const proximos = Array.from(porDia.entries())
-    .filter(([dia]) => dia > hoje)
-    .slice(0, 3)
-    .map(([, valor]) => valor.item);
-
-  if (proximos.length === 3) {
-    return proximos;
-  }
-
   return Array.from(porDia.values())
     .map((valor) => valor.item)
     .slice(0, 3);
 }
 
+function extremosDoDia(lista, diaIso) {
+  const temps = lista
+    .filter((item) => item.dt_txt.startsWith(diaIso))
+    .map((item) => item.main.temp);
+
+  if (temps.length === 0) {
+    return null;
+  }
+
+  return {
+    max: Math.round(Math.max(...temps)),
+    min: Math.round(Math.min(...temps)),
+  };
+}
+
+function criarLinha(texto) {
+  const linha = document.createElement("p");
+  linha.textContent = texto;
+  return linha;
+}
+
 function mostrarErro() {
-  tempoAtual.innerHTML = "";
   const aviso = document.createElement("p");
   aviso.className = "erro";
   aviso.textContent = "Não foi possível carregar o tempo de Joinville.";
-  tempoAtual.appendChild(aviso);
+  tempoAtual.replaceChildren(aviso);
   listaPrevisao.replaceChildren();
 }
 
 function mostrarResultados(atual, previsao) {
-  const descricao = capitalizar(atual.weather[0].description);
+  const descricao = titulo(atual.weather[0].description);
   const icone = atual.weather[0].icon;
-  const figura = document.createElement("figure");
+  const hojeIso = dataIso(atual.dt);
+  const extremos = extremosDoDia(previsao.list, hojeIso);
+  const maxima = extremos ? extremos.max : Math.round(atual.main.temp_max);
+  const minima = extremos ? extremos.min : Math.round(atual.main.temp_min);
+
+  const corpo = document.createElement("div");
   const imagem = document.createElement("img");
-  const legenda = document.createElement("figcaption");
+  const detalhes = document.createElement("div");
   const temperatura = document.createElement("p");
+  const textoDescricao = document.createElement("p");
+
+  corpo.className = "corpo-clima";
+  detalhes.className = "detalhes-clima";
+  temperatura.className = "temperatura-atual";
+  textoDescricao.className = "descricao-clima";
 
   imagem.src = `https://openweathermap.org/img/wn/${icone}@2x.png`;
   imagem.alt = descricao;
   imagem.width = 80;
   imagem.height = 80;
-  legenda.textContent = descricao;
-  temperatura.className = "temperatura-atual";
   temperatura.textContent = `${Math.round(atual.main.temp)}°C`;
+  textoDescricao.textContent = descricao;
 
-  figura.appendChild(imagem);
-  figura.appendChild(legenda);
-  tempoAtual.replaceChildren(temperatura, figura);
+  detalhes.appendChild(temperatura);
+  detalhes.appendChild(textoDescricao);
+  detalhes.appendChild(criarLinha(`Máxima: ${maxima}°C`));
+  detalhes.appendChild(criarLinha(`Mínima: ${minima}°C`));
+  detalhes.appendChild(criarLinha(`Umidade: ${atual.main.humidity}%`));
+  detalhes.appendChild(criarLinha(`Nascer do Sol: ${formatarHora(atual.sys.sunrise)}`));
+  detalhes.appendChild(criarLinha(`Pôr do Sol: ${formatarHora(atual.sys.sunset)}`));
+
+  corpo.appendChild(imagem);
+  corpo.appendChild(detalhes);
+  tempoAtual.replaceChildren(corpo);
 
   const tresDias = obterTresDias(previsao.list);
   listaPrevisao.replaceChildren();
 
   tresDias.forEach((item) => {
     const li = document.createElement("li");
-    const dia = document.createElement("p");
-    const valor = document.createElement("p");
-
-    dia.className = "previsao-dia";
-    dia.textContent = rotuloDoDia(item.dt);
-    valor.className = "previsao-temp";
+    const valor = document.createElement("strong");
+    li.append(`${rotuloPrevisao(item.dt)}: `);
     valor.textContent = `${Math.round(item.main.temp)}°C`;
-
-    li.appendChild(dia);
     li.appendChild(valor);
     listaPrevisao.appendChild(li);
   });

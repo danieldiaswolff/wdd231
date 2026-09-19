@@ -15,42 +15,58 @@ function embaralhar(lista) {
   return copia;
 }
 
+function criarDado(rotulo, conteudo) {
+  const linha = document.createElement("p");
+  const etiqueta = document.createElement("strong");
+  etiqueta.textContent = `${rotulo}: `;
+  linha.appendChild(etiqueta);
+  linha.append(conteudo);
+  return linha;
+}
+
 function criarCartaoDestaque(membro) {
   const artigo = document.createElement("article");
   const nome = document.createElement("h3");
-  const endereco = document.createElement("p");
-  const telefone = document.createElement("p");
-  const site = document.createElement("p");
-  const nivel = document.createElement("span");
+  const slogan = document.createElement("p");
+  const corpo = document.createElement("div");
+  const dados = document.createElement("div");
   const imagem = document.createElement("img");
   const link = document.createElement("a");
+  const nivel = document.createElement("span");
 
   artigo.className = "cartao-destaque";
+  slogan.className = "destaque-slogan";
+  corpo.className = "destaque-corpo";
+  dados.className = "destaque-dados";
+
   nome.textContent = membro.nome;
-  endereco.textContent = membro.endereco;
-  telefone.textContent = membro.telefone;
+  slogan.textContent = membro.setor;
 
   link.href = membro.url;
   link.textContent = membro.url.replace(/^https?:\/\//, "");
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-  site.appendChild(link);
 
   nivel.className = `nivel nivel-${membro.nivelAssociacao}`;
   nivel.textContent = niveis[membro.nivelAssociacao] || "Membro";
 
   imagem.src = `imagens/${membro.imagem}`;
   imagem.alt = `Logotipo de ${membro.nome}`;
-  imagem.width = 560;
-  imagem.height = 560;
+  imagem.width = 96;
+  imagem.height = 96;
   imagem.loading = "lazy";
 
-  artigo.appendChild(imagem);
+  dados.appendChild(criarDado("Telefone", membro.telefone));
+  dados.appendChild(criarDado("Endereço", membro.endereco));
+  dados.appendChild(criarDado("Site", link));
+  dados.appendChild(nivel);
+
+  corpo.appendChild(imagem);
+  corpo.appendChild(dados);
+
   artigo.appendChild(nome);
-  artigo.appendChild(endereco);
-  artigo.appendChild(telefone);
-  artigo.appendChild(site);
-  artigo.appendChild(nivel);
+  artigo.appendChild(slogan);
+  artigo.appendChild(corpo);
 
   return artigo;
 }
