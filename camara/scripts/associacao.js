@@ -14,6 +14,15 @@ document.querySelectorAll(".link-modal").forEach((link) => {
   });
 });
 
+document.querySelectorAll(".fechar-modal").forEach((botao) => {
+  botao.addEventListener("click", () => {
+    const modal = botao.closest("dialog");
+    if (modal) {
+      modal.close();
+    }
+  });
+});
+
 document.querySelectorAll("dialog.modal-nivel").forEach((modal) => {
   modal.addEventListener("click", (evento) => {
     if (evento.target === modal) {

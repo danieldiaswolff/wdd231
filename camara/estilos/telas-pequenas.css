@@ -674,7 +674,8 @@ footer > p {
   border: 0;
 }
 
-.formulario-associacao input[type="submit"] {
+.formulario-associacao input[type="submit"],
+.formulario-associacao button[type="submit"] {
   justify-self: start;
   margin-top: 0.25rem;
   padding: 0.8rem 1.35rem;
@@ -682,11 +683,13 @@ footer > p {
   border-radius: 0.5rem;
   background-color: var(--cor-secundaria);
   color: #fff;
+  font: inherit;
   font-weight: 700;
   cursor: pointer;
 }
 
-.formulario-associacao input[type="submit"]:hover {
+.formulario-associacao input[type="submit"]:hover,
+.formulario-associacao button[type="submit"]:hover {
   background-color: #a34b1f;
 }
 

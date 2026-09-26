@@ -10,6 +10,13 @@
     <meta name="author" content="Daniel Wolff">
     <title>Associe-se | Câmara de Comércio de Joinville</title>
     <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Associe-se | Câmara de Comércio de Joinville">
+    <meta
+      property="og:description"
+      content="Solicite associação à Câmara de Comércio de Joinville e conheça os benefícios dos níveis NP, Bronze, Prata e Ouro."
+    >
+    <meta property="og:image" content="https://danieldiaswolff.github.io/wdd231/camara/imagens/og-inicio.jpg">
+    <meta property="og:url" content="https://danieldiaswolff.github.io/wdd231/camara/associacao.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -99,8 +106,7 @@
                 name="cargo"
                 id="cargo"
                 title="Use apenas letras, hifens e espaços, com no mínimo 7 caracteres"
-                autocomplete="cargo-na-organizacao"
-                placeholder="cargo-na-organizacao"
+                autocomplete="organization-title"
                 pattern="[A-Za-zÀ-ÖØ-öø-ÿ\-\s]{7,}"
                 minlength="7"
               >
@@ -138,7 +144,7 @@
                 name="organizacao"
                 id="organizacao"
                 title="Informe o nome da empresa ou organização"
-                autocomplete="organizacao"
+                autocomplete="organization"
                 required
               >
             </label>
@@ -173,12 +179,9 @@
               ></textarea>
             </label>
 
-            <label class="campo-oculto">
-              Data e hora do pedido
-              <input type="hidden" name="timestamp" id="timestamp">
-            </label>
+            <input type="hidden" name="timestamp" id="timestamp">
 
-            <input type="submit" value="Enviar pedido de associação">
+            <button type="submit">Enviar pedido de associação</button>
           </form>
         </section>
 
@@ -219,9 +222,7 @@
         <li>Acesso à newsletter e comunicados</li>
         <li>Presença no diretório de associados</li>
       </ul>
-      <form method="dialog">
-        <button type="submit">Fechar</button>
-      </form>
+      <button type="button" class="fechar-modal">Fechar</button>
     </dialog>
 
     <dialog id="modal-bronze" class="modal-nivel">
@@ -233,9 +234,7 @@
         <li>Um treinamento online por trimestre</li>
         <li>Listagem padrão no diretório</li>
       </ul>
-      <form method="dialog">
-        <button type="submit">Fechar</button>
-      </form>
+      <button type="button" class="fechar-modal">Fechar</button>
     </dialog>
 
     <dialog id="modal-prata" class="modal-nivel">
@@ -248,9 +247,7 @@
         <li>Publicidade em boletins mensais</li>
         <li>Chance de destaque na página inicial</li>
       </ul>
-      <form method="dialog">
-        <button type="submit">Fechar</button>
-      </form>
+      <button type="button" class="fechar-modal">Fechar</button>
     </dialog>
 
     <dialog id="modal-ouro" class="modal-nivel">
@@ -264,9 +261,7 @@
         <li>Convites VIP e networking exclusivo</li>
         <li>Consultoria rápida de visibilidade da marca</li>
       </ul>
-      <form method="dialog">
-        <button type="submit">Fechar</button>
-      </form>
+      <button type="button" class="fechar-modal">Fechar</button>
     </dialog>
 
     <footer>
