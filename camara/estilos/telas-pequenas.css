@@ -27,6 +27,7 @@
   --cor-rede-borda: #ffffff59;
   --sombra: 0 0.25rem 1rem #0f4c5c1f;
   --sombra-modal: 0 0.75rem 2rem #0f4c5c40;
+  --sombra-foto: 0 1px 2px #000000b3;
   --largura-maxima: 75rem;
   --espacamento: 1rem;
   --raio: 0.75rem;
@@ -458,7 +459,7 @@ footer > p {
   margin: 0;
   font-size: 0.75rem;
   color: var(--cor-cartao);
-  text-shadow: 0 1px 2px #000000b3;
+  text-shadow: var(--sombra-foto);
 }
 
 .conteudo-inicio {
