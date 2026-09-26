@@ -81,6 +81,17 @@
   .grade-destaques {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .layout-associacao {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+    align-items: start;
+    gap: 1.75rem;
+  }
+
+  .grade-niveis {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (min-width: 64rem) {

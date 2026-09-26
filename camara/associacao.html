@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Associe-se à Câmara de Comércio de Joinville. Preencha o formulário e conheça os níveis NP, Bronze, Prata e Ouro."
+    >
+    <meta name="author" content="Daniel Wolff">
+    <title>Associe-se | Câmara de Comércio de Joinville</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/maior.css">
+    <script src="scripts/navegacao.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/associacao.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho-conteudo">
+        <a class="marca" href="index.html">
+          <img src="imagens/logo.png" alt="Logotipo da Câmara de Comércio de Joinville" width="48" height="48">
+          <span>Câmara de Comércio de Joinville</span>
+        </a>
+        <button
+          id="menu-hamburguer"
+          type="button"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="navegacao-principal"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav id="navegacao-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="diretorio.html">Diretório</a></li>
+          <li><a href="associacao.html" aria-current="page">Associe-se</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Associe-se à Câmara</h1>
+      <p class="introducao">
+        Preencha o formulário para solicitar associação. Compare os níveis NP,
+        Bronze, Prata e Ouro nos cartões ao lado (ou abaixo, no celular) e
+        descubra os benefícios de cada um.
+      </p>
+
+      <div class="layout-associacao">
+        <section class="secao-formulario" aria-labelledby="titulo-formulario">
+          <h2 id="titulo-formulario">Pedido de associação</h2>
+          <form
+            class="formulario-associacao"
+            method="get"
+            action="agradecimento.html"
+          >
+            <label>
+              Nome
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                title="Informe o nome do candidato"
+                autocomplete="given-name"
+                required
+              >
+            </label>
+
+            <label>
+              Sobrenome
+              <input
+                type="text"
+                name="sobrenome"
+                id="sobrenome"
+                title="Informe o sobrenome do candidato"
+                autocomplete="family-name"
+                required
+              >
+            </label>
+
+            <label>
+              Cargo na organização
+              <input
+                type="text"
+                name="cargo"
+                id="cargo"
+                title="Use apenas letras, hifens e espaços, com no mínimo 7 caracteres"
+                autocomplete="cargo-na-organizacao"
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ\-\s]{7,}"
+                minlength="7"
+              >
+            </label>
+
+            <label>
+              E-mail
+              <input
+                type="email"
+                name="email"
+                id="email"
+                title="Informe um endereço de e-mail válido"
+                autocomplete="email"
+                placeholder="nome@empresa.com.br"
+                required
+              >
+            </label>
+
+            <label>
+              Celular
+              <input
+                type="tel"
+                name="celular"
+                id="celular"
+                title="Informe o número de celular com DDD"
+                autocomplete="tel"
+                required
+              >
+            </label>
+
+            <label>
+              Nome da empresa/organização
+              <input
+                type="text"
+                name="organizacao"
+                id="organizacao"
+                title="Informe o nome da empresa ou organização"
+                autocomplete="organizacao"
+                required
+              >
+            </label>
+
+            <fieldset class="campo-niveis">
+              <legend>Nível de associação</legend>
+              <label>
+                <input type="radio" name="nivel" value="np" required>
+                Associação NP (sem fins lucrativos)
+              </label>
+              <label>
+                <input type="radio" name="nivel" value="bronze">
+                Associação Bronze
+              </label>
+              <label>
+                <input type="radio" name="nivel" value="silver">
+                Associação Prata
+              </label>
+              <label>
+                <input type="radio" name="nivel" value="gold">
+                Associação Ouro
+              </label>
+            </fieldset>
+
+            <label>
+              Descrição da atividade/organização
+              <textarea
+                name="descricao"
+                id="descricao"
+                title="Descreva a atividade da sua organização"
+                rows="4"
+              ></textarea>
+            </label>
+
+            <label class="campo-oculto">
+              Data e hora do pedido
+              <input type="hidden" name="timestamp" id="timestamp">
+            </label>
+
+            <input type="submit" value="Enviar pedido de associação">
+          </form>
+        </section>
+
+        <section class="secao-niveis" aria-labelledby="titulo-niveis">
+          <h2 id="titulo-niveis">Níveis de associação</h2>
+          <div class="grade-niveis">
+            <article class="cartao-nivel cartao-np">
+              <h3>Associação NP</h3>
+              <p>Para organizações sem fins lucrativos. Sem taxa.</p>
+              <a href="#modal-np" class="link-modal" data-modal="modal-np">Mais informações</a>
+            </article>
+            <article class="cartao-nivel cartao-bronze">
+              <h3>Associação Bronze</h3>
+              <p>Entrada acessível com benefícios essenciais.</p>
+              <a href="#modal-bronze" class="link-modal" data-modal="modal-bronze">Mais informações</a>
+            </article>
+            <article class="cartao-nivel cartao-prata">
+              <h3>Associação Prata</h3>
+              <p>Mais visibilidade, eventos e descontos.</p>
+              <a href="#modal-prata" class="link-modal" data-modal="modal-prata">Mais informações</a>
+            </article>
+            <article class="cartao-nivel cartao-ouro">
+              <h3>Associação Ouro</h3>
+              <p>Máximo destaque e benefícios premium.</p>
+              <a href="#modal-ouro" class="link-modal" data-modal="modal-ouro">Mais informações</a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <dialog id="modal-np" class="modal-nivel">
+      <h2>Associação NP</h2>
+      <p><strong>Taxa:</strong> gratuita</p>
+      <ul>
+        <li>Indicada a organizações sem fins lucrativos</li>
+        <li>Participação em eventos abertos da Câmara</li>
+        <li>Acesso à newsletter e comunicados</li>
+        <li>Presença no diretório de associados</li>
+      </ul>
+      <form method="dialog">
+        <button type="submit">Fechar</button>
+      </form>
+    </dialog>
+
+    <dialog id="modal-bronze" class="modal-nivel">
+      <h2>Associação Bronze</h2>
+      <p><strong>Taxa:</strong> R$ 80 / mês</p>
+      <ul>
+        <li>Todos os benefícios do nível NP</li>
+        <li>Desconto de 10% em eventos pagos</li>
+        <li>Um treinamento online por trimestre</li>
+        <li>Listagem padrão no diretório</li>
+      </ul>
+      <form method="dialog">
+        <button type="submit">Fechar</button>
+      </form>
+    </dialog>
+
+    <dialog id="modal-prata" class="modal-nivel">
+      <h2>Associação Prata</h2>
+      <p><strong>Taxa:</strong> R$ 160 / mês</p>
+      <ul>
+        <li>Todos os benefícios Bronze</li>
+        <li>Desconto de 25% em eventos e workshops</li>
+        <li>Dois treinamentos presenciais por semestre</li>
+        <li>Publicidade em boletins mensais</li>
+        <li>Chance de destaque na página inicial</li>
+      </ul>
+      <form method="dialog">
+        <button type="submit">Fechar</button>
+      </form>
+    </dialog>
+
+    <dialog id="modal-ouro" class="modal-nivel">
+      <h2>Associação Ouro</h2>
+      <p><strong>Taxa:</strong> R$ 320 / mês</p>
+      <ul>
+        <li>Todos os benefícios Prata</li>
+        <li>Desconto de 40% em eventos especiais</li>
+        <li>Treinamentos ilimitados no calendário anual</li>
+        <li>Posição de destaque garantida na página inicial</li>
+        <li>Convites VIP e networking exclusivo</li>
+        <li>Consultoria rápida de visibilidade da marca</li>
+      </ul>
+      <form method="dialog">
+        <button type="submit">Fechar</button>
+      </form>
+    </dialog>
+
+    <footer>
+      <div class="rodape-grade">
+        <div class="rodape-marca">
+          <img src="imagens/logo.png" alt="" width="48" height="48">
+          <p>Câmara de Comércio de Joinville</p>
+        </div>
+        <address>
+          Rua do Príncipe, 123<br>
+          Centro, Joinville - SC, 89201-000<br>
+          <a href="tel:+554734330000">(47) 3433-0000</a><br>
+          <a href="mailto:contato@camarajoinville.org.br">contato@camarajoinville.org.br</a>
+        </address>
+        <nav class="redes-sociais" aria-label="Redes sociais">
+          <a href="https://github.com/danieldiaswolff" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Daniel Wolff">
+            <img src="imagens/icon-github.svg" alt="" width="32" height="32">
+          </a>
+          <a href="https://www.linkedin.com/in/danieldiaswolff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Daniel Wolff">
+            <img src="imagens/icon-linkedin.svg" alt="" width="32" height="32">
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="imagens/icon-youtube.svg" alt="" width="32" height="32">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="imagens/icon-instagram.svg" alt="" width="32" height="32">
+          </a>
+        </nav>
+      </div>
+      <p>
+        &copy; <span id="anoAtual"></span> Daniel Wolff | WDD 231
+      </p>
+      <p id="ultimaModificacao"></p>
+    </footer>
+  </body>
+</html>

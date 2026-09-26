@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Diretório de empresas associadas à Câmara de Comércio de Joinville, com contatos, sites e níveis de associação."
+      content="Obrigado por solicitar associação à Câmara de Comércio de Joinville. Confira os dados enviados."
     >
     <meta name="author" content="Daniel Wolff">
-    <title>Diretório | Câmara de Comércio de Joinville</title>
+    <title>Agradecimento | Câmara de Comércio de Joinville</title>
     <link rel="icon" href="favicon.ico">
-    <meta property="og:title" content="Diretório | Câmara de Comércio de Joinville">
-    <meta
-      property="og:description"
-      content="Encontre empresas associadas à Câmara de Comércio de Joinville: contatos, sites e níveis de associação em grade ou lista."
-    >
-    <meta property="og:image" content="https://danieldiaswolff.github.io/wdd231/camara/imagens/og-diretorio.jpg">
-    <meta property="og:url" content="https://danieldiaswolff.github.io/wdd231/camara/diretorio.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -28,7 +21,7 @@
     <link rel="stylesheet" href="estilos/maior.css">
     <script src="scripts/navegacao.js" defer></script>
     <script src="scripts/data.js" defer></script>
-    <script src="scripts/membros.js" defer></script>
+    <script src="scripts/agradecimento.js" defer></script>
   </head>
   <body>
     <header>
@@ -53,31 +46,50 @@
         <ul>
           <li><a href="index.html">Página Inicial</a></li>
           <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="diretorio.html" aria-current="page">Diretório</a></li>
+          <li><a href="diretorio.html">Diretório</a></li>
           <li><a href="associacao.html">Associe-se</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <h1>Diretório de Associados</h1>
+      <h1>Obrigado pelo seu pedido</h1>
       <p class="introducao">
-        Conheça empresas e organizações que fortalecem os negócios em Joinville.
-        Alterne entre a visualização em grade ou em lista.
+        Recebemos sua solicitação de associação. Em breve a equipe da Câmara
+        entrará em contato pelos dados informados.
       </p>
 
-      <div class="controles-exibicao" role="group" aria-label="Alterar visualização do diretório">
-        <button type="button" id="botao-grade" class="ativo" aria-pressed="true">
-          Grade
-        </button>
-        <button type="button" id="botao-lista" aria-pressed="false">
-          Lista
-        </button>
-      </div>
-
-      <section aria-labelledby="titulo-membros">
-        <h2 id="titulo-membros">Membros da Câmara</h2>
-        <div id="membros" class="grade"></div>
+      <section class="resumo-pedido" aria-labelledby="titulo-resumo">
+        <h2 id="titulo-resumo">Dados enviados</h2>
+        <dl id="dados-formulario" class="lista-dados">
+          <div>
+            <dt>Nome</dt>
+            <dd id="exibe-nome">—</dd>
+          </div>
+          <div>
+            <dt>Sobrenome</dt>
+            <dd id="exibe-sobrenome">—</dd>
+          </div>
+          <div>
+            <dt>E-mail</dt>
+            <dd id="exibe-email">—</dd>
+          </div>
+          <div>
+            <dt>Celular</dt>
+            <dd id="exibe-celular">—</dd>
+          </div>
+          <div>
+            <dt>Empresa/organização</dt>
+            <dd id="exibe-organizacao">—</dd>
+          </div>
+          <div>
+            <dt>Data e hora do pedido</dt>
+            <dd id="exibe-timestamp">—</dd>
+          </div>
+        </dl>
+        <p>
+          <a class="botao-voltar" href="associacao.html">Voltar ao formulário</a>
+        </p>
       </section>
     </main>
 
