@@ -5,20 +5,20 @@ export const interesses = [
     nome: "Expoville",
     endereco: "Rua XV de Novembro, 4315 - Glória, Joinville - SC",
     descricao:
-      "Principal centro de eventos da cidade, com feiras, congressos e shows que movimentam negócios e turismo o ano inteiro.",
+      "Principal centro de eventos da cidade, marcado pelo icônico pórtico-moinho e por feiras, congressos e shows o ano inteiro.",
     imagem: "imagens/interesse-expoville.webp",
-    alt: "Área aberta do complexo Expoville em Joinville",
+    alt: "Pórtico e moinho da Rua XV no complexo Expoville, em Joinville",
     url: "https://www.expoville.com.br/",
   },
   {
     id: "barragem",
     area: "dois",
-    nome: "Parque da Barragem",
-    endereco: "Rodovia SC-418 - Pirabeiraba, Joinville - SC",
+    nome: "Parque Natural da Caieira",
+    endereco: "Rua Ottokar Doerffel - Atiradores, Joinville - SC",
     descricao:
-      "Espaço de lazer com trilhas, mirantes e contato com a natureza, ideal para famílias e visitantes que buscam ar livre.",
+      "Unidade de conservação urbana com trilhas, manguezal e contato com a natureza, ideal para famílias e visitantes.",
     imagem: "imagens/interesse-barragem.webp",
-    alt: "Paisagem verde do Parque da Barragem em Joinville",
+    alt: "Trilha e vegetação do Parque Natural Municipal da Caieira em Joinville",
     url: "https://www.joinville.sc.gov.br/",
   },
   {
@@ -46,12 +46,12 @@ export const interesses = [
   {
     id: "teatro",
     area: "cinco",
-    nome: "Teatro Juarez Machado",
+    nome: "Escola do Teatro Bolshoi",
     endereco: "Rua Dona Francisca, 8000 - Zona Industrial Norte, Joinville - SC",
     descricao:
-      "Casa de espetáculos vinculada à Escola do Teatro Bolshoi no Brasil, referência nacional em artes cênicas e cultura.",
+      "Única escola do Teatro Bolshoi fora da Rússia, referência nacional em artes cênicas, formação e espetáculos.",
     imagem: "imagens/interesse-teatro.webp",
-    alt: "Espaço cultural do Teatro Juarez Machado em Joinville",
+    alt: "Edifício da Escola do Teatro Bolshoi no Brasil, em Joinville",
     url: "https://www.bolshoi.com.br/",
   },
   {
@@ -62,7 +62,7 @@ export const interesses = [
     descricao:
       "Corredor urbano arborizado com comércio, cafés e vida de bairro, ótimo para caminhadas e networking informal.",
     imagem: "imagens/interesse-palmeiras.webp",
-    alt: "Rua das Palmeiras com árvores e movimento urbano em Joinville",
+    alt: "Rua das Palmeiras arborizada no bairro América, em Joinville",
     url: "https://www.joinville.sc.gov.br/",
   },
   {
@@ -79,12 +79,12 @@ export const interesses = [
   {
     id: "zoo",
     area: "oito",
-    nome: "Zoo Joinville",
+    nome: "Parque Zoobotânico",
     endereco: "Rodovia SC-301, Km 5 - Vila Nova, Joinville - SC",
     descricao:
-      "Zoológico municipal com espécies nativas e atividades educativas, atração frequente para moradores e turistas.",
+      "Parque zoobotânico com espécies nativas e atividades educativas, atração frequente para moradores e turistas.",
     imagem: "imagens/interesse-zoo.webp",
-    alt: "Área verde do Zoo Joinville com vegetação local",
+    alt: "Área verde do Parque Zoobotânico de Joinville",
     url: "https://www.joinville.sc.gov.br/",
   },
 ];
