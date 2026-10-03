@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Planejamento do site Trilhas Joinville: finalidade, cenários, cores, tipografia e wireframes da página inicial."
+    >
+    <meta name="author" content="Daniel Wolff">
+    <title>Planejamento do Site | Trilhas Joinville</title>
+    <link rel="icon" href="../imagens/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="estilos/siteplan.css">
+  </head>
+  <body>
+    <header>
+      <p class="subtitulo-plano">WDD 231 · S05 · Planejamento do Site</p>
+      <h1 class="marca">Trilhas Joinville</h1>
+      <p>
+        Documento de planejamento do projeto individual de site (3 páginas).
+      </p>
+    </header>
+
+    <main>
+      <section aria-labelledby="nome-site">
+        <h2 id="nome-site">1. Nome do Site</h2>
+        <p><strong>Trilhas Joinville</strong></p>
+        <p>
+          O nome é curto, fácil de lembrar e deixa claro o assunto: trilhas e
+          natureza no entorno de Joinville. Também funciona bem como marca em
+          navegação e favicon.
+        </p>
+        <p class="nota">
+          Domínio ilustrativo (opcional): <code>trilhasjoinville.com.br</code>
+        </p>
+      </section>
+
+      <section aria-labelledby="finalidade">
+        <h2 id="finalidade">2. Finalidade do Site</h2>
+        <p>
+          Informar moradores e visitantes sobre trilhas e pontos de natureza da
+          região de Joinville, com dados práticos (dificuldade, distância e
+          dicas) e um canal de contato para dúvidas ou sugestões de roteiros.
+        </p>
+        <p>Conteúdo e serviços previstos:</p>
+        <ul>
+          <li>Página inicial com apresentação e destaques da semana</li>
+          <li>Lista dinâmica de trilhas (JSON/API, 15+ itens)</li>
+          <li>Formulário de contato / sugestão de trilha</li>
+          <li>Detalhes em modal e preferências salvas no navegador</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="cenarios">
+        <h2 id="cenarios">3. Cenários</h2>
+        <p>
+          Perguntas típicas do público-alvo (caminhantes, famílias e turistas):
+        </p>
+        <ul>
+          <li>
+            Qual trilha perto de Joinville é boa para iniciantes e tem menos de
+            5 km?
+          </li>
+          <li>
+            Como posso enviar uma sugestão de trilha ou pedir informações de
+            acesso?
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="cores">
+        <h2 id="cores">4. Esquema de Cores</h2>
+        <p>
+          Paleta inspirada em mata atlântica e trilhas: verde profundo para
+          marca/títulos, laranja terroso para CTAs e fundo claro para leitura.
+        </p>
+        <div class="amostra-cores">
+          <div class="cor">
+            <div class="swatch swatch-primaria" aria-hidden="true"></div>
+            <div>
+              <strong>Primária · #1B4332</strong>
+              <p>Cabeçalho, títulos e rodapé</p>
+            </div>
+          </div>
+          <div class="cor">
+            <div class="swatch swatch-acento" aria-hidden="true"></div>
+            <div>
+              <strong>Acento · #C2410C</strong>
+              <p>Botões, links e destaques</p>
+            </div>
+          </div>
+          <div class="cor">
+            <div class="swatch swatch-fundo" aria-hidden="true"></div>
+            <div>
+              <strong>Fundo · #F1F5F0</strong>
+              <p>Fundo geral das páginas</p>
+            </div>
+          </div>
+          <div class="cor">
+            <div class="swatch swatch-texto" aria-hidden="true"></div>
+            <div>
+              <strong>Texto · #1A1A1A</strong>
+              <p>Parágrafos e conteúdo principal</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="exemplo-tipografia" aria-labelledby="tipografia">
+        <h2 id="tipografia">5. Tipografia</h2>
+        <p>Duas fontes (Google Fonts), com papéis bem definidos:</p>
+        <ul>
+          <li>
+            <strong>Literata</strong> — títulos e nome da marca
+          </li>
+          <li>
+            <strong>Nunito Sans</strong> — corpo do texto, navegação e
+            formulários
+          </li>
+        </ul>
+        <p class="exemplo-titulo">Exemplo de título com Literata</p>
+        <p class="exemplo-corpo">
+          Exemplo de parágrafo com Nunito Sans: texto confortável para ler
+          descrições de trilhas, dicas de segurança e informações de contato.
+        </p>
+      </section>
+
+      <section aria-labelledby="wireframes">
+        <h2 id="wireframes">6. Wireframe da Página Inicial</h2>
+        <p class="nota">
+          Esboços em preto e branco focados só em estrutura (sem cores nem
+          imagens finais).
+        </p>
+
+        <div class="wireframes">
+          <article class="wireframe wf-mobile" aria-label="Wireframe mobile">
+            <h3>Viewport pequena</h3>
+            <div class="wf-pagina">
+              <div class="wf-bloco wf-header">Logo + nome</div>
+              <div class="wf-bloco wf-nav">Menu hamburger</div>
+              <div class="wf-bloco wf-hero">Hero / imagem de trilha</div>
+              <div class="wf-bloco wf-texto">Introdução + CTA</div>
+              <div class="wf-cards">
+                <div class="wf-bloco wf-card">Destaque 1</div>
+                <div class="wf-bloco wf-card">Destaque 2</div>
+                <div class="wf-bloco wf-card">Destaque 3</div>
+              </div>
+              <div class="wf-bloco wf-cta">Botão Ver trilhas</div>
+              <div class="wf-bloco wf-footer">Rodapé / contato</div>
+            </div>
+          </article>
+
+          <article class="wireframe wf-desktop" aria-label="Wireframe desktop">
+            <h3>Viewport grande</h3>
+            <div class="wf-pagina">
+              <div class="wf-topo">
+                <div class="wf-bloco wf-header">Logo + nome</div>
+                <div class="wf-bloco wf-nav">Nav horizontal</div>
+              </div>
+              <div class="wf-bloco wf-hero">Hero em largura total</div>
+              <div class="wf-bloco wf-texto">Introdução + CTA à esquerda</div>
+              <div class="wf-cards">
+                <div class="wf-bloco wf-card">Destaque 1</div>
+                <div class="wf-bloco wf-card">Destaque 2</div>
+                <div class="wf-bloco wf-card">Destaque 3</div>
+              </div>
+              <div class="wf-bloco wf-footer">Rodapé em colunas</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="paginas">
+        <h2 id="paginas">Páginas planejadas (S06)</h2>
+        <ul>
+          <li><strong>index.html</strong> — apresentação e destaques</li>
+          <li><strong>trilhas.html</strong> — lista dinâmica (15+ trilhas)</li>
+          <li><strong>contato.html</strong> — formulário + agradecimento</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Daniel Wolff · WDD 231</p>
+      <p>
+        <a href="../index.html">Voltar à página do curso</a>
+      </p>
+    </footer>
+  </body>
+</html>
