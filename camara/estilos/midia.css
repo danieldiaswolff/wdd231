@@ -1,0 +1,175 @@
+/* Layout da página Sobre com áreas de grade nomeadas */
+
+.mensagem-visita {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding: 0.9rem 1rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.mensagem-visita[hidden] {
+  display: none;
+}
+
+.mensagem-visita p {
+  margin: 0;
+  flex: 1 1 14rem;
+  font-weight: 600;
+}
+
+.mensagem-visita button {
+  padding: 0.45rem 0.9rem;
+  border: 2px solid var(--cor-texto-claro);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--cor-texto-claro);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mensagem-visita button:hover {
+  background-color: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+  color: var(--cor-primaria-escura);
+}
+
+.grade-interesses {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "um"
+    "dois"
+    "tres"
+    "quatro"
+    "cinco"
+    "seis"
+    "sete"
+    "oito";
+}
+
+.interesse-um { grid-area: um; }
+.interesse-dois { grid-area: dois; }
+.interesse-tres { grid-area: tres; }
+.interesse-quatro { grid-area: quatro; }
+.interesse-cinco { grid-area: cinco; }
+.interesse-seis { grid-area: seis; }
+.interesse-sete { grid-area: sete; }
+.interesse-oito { grid-area: oito; }
+
+.cartao-interesse {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  background-color: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 1rem;
+}
+
+.cartao-interesse h2 {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  color: var(--cor-primaria);
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cartao-interesse figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: var(--cor-fundo-suave);
+}
+
+.cartao-interesse img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.cartao-interesse address {
+  font-size: 0.9rem;
+  color: var(--cor-prata);
+  line-height: 1.4;
+}
+
+.cartao-interesse p {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.cartao-interesse button {
+  align-self: start;
+  margin-top: 0.25rem;
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--cor-secundaria-escura);
+  color: var(--cor-cartao);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cartao-interesse button:hover {
+  background-color: var(--cor-secundaria-mais-escura);
+}
+
+/* Telas médias: 641px a 1024px */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .grade-interesses {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "um um"
+      "dois tres"
+      "quatro cinco"
+      "seis seis"
+      "sete oito";
+  }
+}
+
+/* Telas grandes: 1025px e acima */
+@media screen and (min-width: 1025px) {
+  .grade-interesses {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "um um dois tres"
+      "quatro cinco cinco seis"
+      "sete oito oito oito";
+  }
+}
+
+/* Efeito de hover nas imagens — apenas fora do mobile */
+@media screen and (min-width: 641px) {
+  .cartao-interesse figure img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .cartao-interesse figure:hover img {
+    transform: scale(1.06);
+    filter: brightness(1.08) saturate(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cartao-interesse figure img {
+    transition: none;
+  }
+
+  .cartao-interesse figure:hover img {
+    transform: none;
+    filter: none;
+  }
+}

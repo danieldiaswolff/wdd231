@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Sobre a Câmara de Comércio de Joinville: história, comunidade e eventos da maior cidade de Santa Catarina."
+      content="Conheça Joinville: demografia, cultura e oito pontos de interesse que atraem negócios, visitantes e associados da Câmara."
     >
     <meta name="author" content="Daniel Wolff">
     <title>Sobre | Câmara de Comércio de Joinville</title>
     <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Sobre Joinville | Câmara de Comércio">
+    <meta
+      property="og:description"
+      content="Dados e atrações de Joinville para quem quer empreender, visitar ou se associar à Câmara de Comércio."
+    >
+    <meta property="og:image" content="https://danieldiaswolff.github.io/wdd231/camara/imagens/og-inicio.jpg">
+    <meta property="og:url" content="https://danieldiaswolff.github.io/wdd231/camara/sobre.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -32,8 +39,10 @@
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/maior.css">
+    <link rel="stylesheet" href="estilos/midia.css">
     <script src="scripts/navegacao.js" defer></script>
     <script src="scripts/data.js" defer></script>
+    <script src="scripts/sobre.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -66,12 +75,33 @@
 
     <main>
       <h1>Sobre Joinville</h1>
-      <section class="pagina-resumo">
-        <h2>Em desenvolvimento</h2>
+
+      <aside id="mensagem-visita" class="mensagem-visita" hidden>
+        <p></p>
+        <button id="fechar-visita" type="button" aria-label="Fechar mensagem de visita">Fechar</button>
+      </aside>
+
+      <section class="pagina-resumo" aria-labelledby="titulo-cidade">
+        <h2 id="titulo-cidade">A maior cidade de Santa Catarina</h2>
         <p>
-          Esta página apresentará a história local, dados demográficos e uma
-          montagem de imagens da região nas próximas semanas do projeto.
+          Joinville reúne indústria, comércio e serviços com cerca de
+          <strong>616 mil habitantes</strong> (IBGE). A cidade combina tradição
+          imigrante, polo metalmecânico e agenda cultural ativa — um ambiente
+          atrativo para empresas que buscam crescer no Norte Catarinense.
         </p>
+        <p>
+          A Câmara de Comércio conecta esses potenciais: networking, vitrine de
+          associados e informações locais para quem visita ou investe aqui.
+        </p>
+      </section>
+
+      <section aria-labelledby="titulo-interesses">
+        <h2 id="titulo-interesses">Pontos de interesse</h2>
+        <p class="introducao">
+          Conheça oito lugares que representam a vida econômica, cultural e
+          turística de Joinville.
+        </p>
+        <div id="grade-interesses" class="grade-interesses"></div>
       </section>
     </main>
 
