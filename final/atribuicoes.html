@@ -3,10 +3,34 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fontes e créditos de imagens e recursos usados no site Trilhas Joinville.">
+    <meta
+      name="description"
+      content="Fontes e créditos de imagens, tipografia e recursos usados no site Trilhas Joinville."
+    >
     <meta name="author" content="Daniel Wolff">
     <title>Atribuições | Trilhas Joinville</title>
     <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+    <meta property="og:title" content="Atribuições e créditos | Trilhas Joinville">
+    <meta
+      property="og:description"
+      content="Fontes e créditos de imagens, tipografia e recursos usados no site Trilhas Joinville."
+    >
+    <meta
+      property="og:image"
+      content="https://danieldiaswolff.github.io/wdd231/final/imagens/og-inicio.jpg"
+    >
+    <meta
+      property="og:url"
+      content="https://danieldiaswolff.github.io/wdd231/final/atribuicoes.html"
+    >
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/base.css">
     <script type="module" src="scripts/navegacao.mjs"></script>
   </head>
@@ -14,7 +38,12 @@
     <header>
       <div class="cabecalho">
         <a class="marca" href="index.html">
-          <img src="imagens/favicon.svg" alt="" width="40" height="40">
+          <img
+            src="imagens/favicon.svg"
+            alt="Logotipo Trilhas Joinville"
+            width="40"
+            height="40"
+          >
           <span>Trilhas Joinville</span>
         </a>
         <button
@@ -83,9 +112,6 @@
           <p>WDD 231 · Projeto Final</p>
         </div>
       </div>
-      <script>
-        document.getElementById("ano").textContent = new Date().getFullYear();
-      </script>
     </footer>
   </body>
 </html>

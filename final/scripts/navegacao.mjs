@@ -1,5 +1,10 @@
 const botaoMenu = document.querySelector("#menu");
 const navegacao = document.querySelector("#navegacao");
+const ano = document.querySelector("#ano");
+
+if (ano) {
+  ano.textContent = String(new Date().getFullYear());
+}
 
 if (botaoMenu && navegacao) {
   botaoMenu.addEventListener("click", () => {
