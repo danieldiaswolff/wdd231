@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Trilhas Joinville: descubra caminhadas e natureza perto da cidade, com dificuldade, distância e dicas práticas."
+    >
+    <meta name="author" content="Daniel Wolff">
+    <title>Início | Trilhas Joinville</title>
+    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+    <meta property="og:title" content="Trilhas Joinville | Caminhadas e Natureza">
+    <meta
+      property="og:description"
+      content="Guia local de trilhas perto de Joinville com dados práticos e contato para sugestões."
+    >
+    <meta
+      property="og:image"
+      content="https://danieldiaswolff.github.io/wdd231/final/imagens/og-inicio.jpg"
+    >
+    <meta
+      property="og:url"
+      content="https://danieldiaswolff.github.io/wdd231/final/"
+    >
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+    >
+    <link
+      id="fontes-google"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+      >
+    </noscript>
+    <link rel="stylesheet" href="estilos/base.css">
+    <script type="module" src="scripts/inicio.mjs"></script>
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho">
+        <a class="marca" href="index.html">
+          <img src="imagens/favicon.svg" alt="" width="40" height="40">
+          <span>Trilhas Joinville</span>
+        </a>
+        <button
+          id="menu"
+          type="button"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="navegacao"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav id="navegacao" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="trilhas.html">Trilhas</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="heroi" aria-labelledby="titulo-heroi">
+        <img
+          src="imagens/heroi.webp"
+          alt="Vista de vegetação e horizonte em Joinville"
+          width="1280"
+          height="720"
+        >
+        <div class="heroi-texto">
+          <h1 id="titulo-heroi">Trilhas Joinville</h1>
+          <p>
+            Caminhadas, mirantes e natureza perto da cidade — com informações
+            claras para planejar seu próximo passeio.
+          </p>
+          <a class="botao" href="trilhas.html">Ver trilhas</a>
+        </div>
+      </section>
+
+      <p id="mensagem-visitas" class="mensagem" role="status"></p>
+
+      <section aria-labelledby="titulo-destaques">
+        <h2 id="titulo-destaques">Destaques</h2>
+        <p class="intro">
+          Três opções em destaque, carregadas dinamicamente do nosso arquivo de
+          dados. Clique em “Ver detalhes” para abrir o modal.
+        </p>
+        <div id="destaques" class="grade-destaques"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="rodape-conteudo">
+        <div>
+          <p><strong>Trilhas Joinville</strong></p>
+          <p>Guia local de caminhadas e natureza.</p>
+        </div>
+        <div>
+          <p><a href="atribuicoes.html">Atribuições</a></p>
+          <p>
+            <a
+              href="#"
+              id="link-video"
+              title="Substitua este link pelo vídeo de demonstração"
+            >Vídeo da demonstração (adicione o link)</a>
+          </p>
+        </div>
+        <div>
+          <p>&copy; <span id="ano"></span> Daniel Wolff</p>
+          <p>WDD 231 · Projeto Final</p>
+        </div>
+      </div>
+      <script>
+        document.getElementById("ano").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>

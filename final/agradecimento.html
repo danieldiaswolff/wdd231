@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Obrigado pelo contato. Confira os dados enviados no formulário de Trilhas Joinville."
+    >
+    <meta name="author" content="Daniel Wolff">
+    <title>Agradecimento | Trilhas Joinville</title>
+    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+    >
+    <link
+      id="fontes-google"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+      >
+    </noscript>
+    <link rel="stylesheet" href="estilos/base.css">
+    <script type="module" src="scripts/agradecimento.mjs"></script>
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho">
+        <a class="marca" href="index.html">
+          <img src="imagens/favicon.svg" alt="" width="40" height="40">
+          <span>Trilhas Joinville</span>
+        </a>
+        <button
+          id="menu"
+          type="button"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="navegacao"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav id="navegacao" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="trilhas.html">Trilhas</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Obrigado pelo contato</h1>
+      <p class="intro">
+        Recebemos sua mensagem. Confira abaixo os dados enviados pelo
+        formulário.
+      </p>
+
+      <section class="lista-dados" aria-labelledby="titulo-resumo">
+        <h2 id="titulo-resumo">Dados enviados</h2>
+        <dl id="dados-formulario"></dl>
+      </section>
+
+      <p><a class="botao" href="trilhas.html">Voltar às trilhas</a></p>
+    </main>
+
+    <footer>
+      <div class="rodape-conteudo">
+        <div>
+          <p><strong>Trilhas Joinville</strong></p>
+          <p>Guia local de caminhadas e natureza.</p>
+        </div>
+        <div>
+          <p><a href="atribuicoes.html">Atribuições</a></p>
+          <p>
+            <a
+              href="#"
+              id="link-video"
+              title="Substitua este link pelo vídeo de demonstração"
+            >Vídeo da demonstração (adicione o link)</a>
+          </p>
+        </div>
+        <div>
+          <p>&copy; <span id="ano"></span> Daniel Wolff</p>
+          <p>WDD 231 · Projeto Final</p>
+        </div>
+      </div>
+      <script>
+        document.getElementById("ano").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>

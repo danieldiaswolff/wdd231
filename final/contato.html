@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Envie dúvidas ou sugestões de trilhas perto de Joinville pelo formulário de contato."
+    >
+    <meta name="author" content="Daniel Wolff">
+    <title>Contato | Trilhas Joinville</title>
+    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+    <meta property="og:title" content="Contato | Trilhas Joinville">
+    <meta
+      property="og:description"
+      content="Fale conosco para dúvidas, dicas de acesso ou sugestões de novas trilhas."
+    >
+    <meta
+      property="og:image"
+      content="https://danieldiaswolff.github.io/wdd231/final/imagens/og-inicio.jpg"
+    >
+    <meta
+      property="og:url"
+      content="https://danieldiaswolff.github.io/wdd231/final/contato.html"
+    >
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+    >
+    <link
+      id="fontes-google"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Literata:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+      >
+    </noscript>
+    <link rel="stylesheet" href="estilos/base.css">
+    <script type="module" src="scripts/contato.mjs"></script>
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho">
+        <a class="marca" href="index.html">
+          <img src="imagens/favicon.svg" alt="" width="40" height="40">
+          <span>Trilhas Joinville</span>
+        </a>
+        <button
+          id="menu"
+          type="button"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="navegacao"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav id="navegacao" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="trilhas.html">Trilhas</a></li>
+          <li><a href="contato.html" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contato</h1>
+      <p class="intro">
+        Tem uma dúvida de acesso, uma sugestão de trilha ou um relato útil?
+        Envie pelo formulário abaixo.
+      </p>
+
+      <form
+        id="formulario-contato"
+        class="formulario"
+        method="get"
+        action="agradecimento.html"
+      >
+        <label for="nome">
+          Nome
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            autocomplete="name"
+            required
+          >
+        </label>
+
+        <label for="email">
+          E-mail
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          >
+        </label>
+
+        <label for="telefone">
+          Telefone
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            autocomplete="tel"
+          >
+        </label>
+
+        <label for="dificuldade">
+          Dificuldade preferida
+          <select id="dificuldade" name="dificuldade" required>
+            <option value="">Selecione</option>
+            <option value="Facil">Fácil</option>
+            <option value="Moderada">Moderada</option>
+            <option value="Dificil">Difícil</option>
+            <option value="qualquer">Qualquer</option>
+          </select>
+        </label>
+
+        <label for="mensagem">
+          Mensagem
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            required
+          ></textarea>
+        </label>
+
+        <input type="submit" value="Enviar mensagem">
+      </form>
+    </main>
+
+    <footer>
+      <div class="rodape-conteudo">
+        <div>
+          <p><strong>Trilhas Joinville</strong></p>
+          <p>Guia local de caminhadas e natureza.</p>
+        </div>
+        <div>
+          <p><a href="atribuicoes.html">Atribuições</a></p>
+          <p>
+            <a
+              href="#"
+              id="link-video"
+              title="Substitua este link pelo vídeo de demonstração"
+            >Vídeo da demonstração (adicione o link)</a>
+          </p>
+        </div>
+        <div>
+          <p>&copy; <span id="ano"></span> Daniel Wolff</p>
+          <p>WDD 231 · Projeto Final</p>
+        </div>
+      </div>
+      <script>
+        document.getElementById("ano").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>

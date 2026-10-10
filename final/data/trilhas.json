@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "nome": "Mirante da Boa Vista",
+    "dificuldade": "Facil",
+    "distanciaKm": 2.4,
+    "duracao": "1h",
+    "local": "Morro da Boa Vista",
+    "descricao": "Caminhada curta com vista panoramica da cidade e da Baia da Babitonga.",
+    "imagem": "imagens/trilha-01.webp",
+    "destaque": true
+  },
+  {
+    "id": 2,
+    "nome": "Parque Natural da Caieira",
+    "dificuldade": "Facil",
+    "distanciaKm": 3.0,
+    "duracao": "1h30",
+    "local": "Atiradores",
+    "descricao": "Trilhas urbanas entre manguezal e mata, boas para familias.",
+    "imagem": "imagens/trilha-02.webp",
+    "destaque": true
+  },
+  {
+    "id": 3,
+    "nome": "Parque Zoobotanico",
+    "dificuldade": "Facil",
+    "distanciaKm": 2.0,
+    "duracao": "1h",
+    "local": "Vila Nova",
+    "descricao": "Percurso leve em area verde com fauna e flora locais.",
+    "imagem": "imagens/trilha-03.webp",
+    "destaque": false
+  },
+  {
+    "id": 4,
+    "nome": "Rua das Palmeiras",
+    "dificuldade": "Facil",
+    "distanciaKm": 1.5,
+    "duracao": "40min",
+    "local": "America",
+    "descricao": "Caminhada urbana arborizada, ideal para passeio leve no centro.",
+    "imagem": "imagens/trilha-04.webp",
+    "destaque": false
+  },
+  {
+    "id": 5,
+    "nome": "Morro do Finder",
+    "dificuldade": "Moderada",
+    "distanciaKm": 4.5,
+    "duracao": "2h",
+    "local": "Zona Leste",
+    "descricao": "Subida com mirantes e boa vista para a baia em dias claros.",
+    "imagem": "imagens/trilha-05.webp",
+    "destaque": true
+  },
+  {
+    "id": 6,
+    "nome": "Serra Dona Francisca",
+    "dificuldade": "Dificil",
+    "distanciaKm": 9.0,
+    "duracao": "5h",
+    "local": "APA Serra Dona Francisca",
+    "descricao": "Trilha longa em mata atlantica, exige preparo e agua.",
+    "imagem": "imagens/trilha-06.webp",
+    "destaque": false
+  },
+  {
+    "id": 7,
+    "nome": "Castelo dos Bugres",
+    "dificuldade": "Moderada",
+    "distanciaKm": 5.2,
+    "duracao": "2h30",
+    "local": "Pirabeiraba",
+    "descricao": "Formacoes rochosas e trilha tecnica com trechos de subida.",
+    "imagem": "imagens/trilha-07.webp",
+    "destaque": false
+  },
+  {
+    "id": 8,
+    "nome": "Rio Cubatao",
+    "dificuldade": "Facil",
+    "distanciaKm": 3.8,
+    "duracao": "1h45",
+    "local": "Pirabeiraba",
+    "descricao": "Caminho junto ao rio, sombra e pontos para descanso.",
+    "imagem": "imagens/trilha-08.webp",
+    "destaque": false
+  },
+  {
+    "id": 9,
+    "nome": "Estrada do Arroz",
+    "dificuldade": "Moderada",
+    "distanciaKm": 6.0,
+    "duracao": "3h",
+    "local": "Zona Rural",
+    "descricao": "Percurso misto de estrada e trilha com paisagem aberta.",
+    "imagem": "imagens/trilha-09.webp",
+    "destaque": false
+  },
+  {
+    "id": 10,
+    "nome": "Morro do Iririu",
+    "dificuldade": "Moderada",
+    "distanciaKm": 4.0,
+    "duracao": "2h",
+    "local": "Iririu",
+    "descricao": "Subida popular com vista da zona leste de Joinville.",
+    "imagem": "imagens/trilha-10.webp",
+    "destaque": false
+  },
+  {
+    "id": 11,
+    "nome": "Trilha da Barragem",
+    "dificuldade": "Facil",
+    "distanciaKm": 3.2,
+    "duracao": "1h30",
+    "local": "Pirabeiraba",
+    "descricao": "Caminhada tranquila ao redor da area da barragem.",
+    "imagem": "imagens/trilha-11.webp",
+    "destaque": false
+  },
+  {
+    "id": 12,
+    "nome": "Cachoeira do Rio Cachoeira",
+    "dificuldade": "Moderada",
+    "distanciaKm": 5.5,
+    "duracao": "2h45",
+    "local": "Interior",
+    "descricao": "Trilha ate queda d'agua; leve calcado antiderrapante.",
+    "imagem": "imagens/trilha-12.webp",
+    "destaque": false
+  },
+  {
+    "id": 13,
+    "nome": "Quiriri",
+    "dificuldade": "Dificil",
+    "distanciaKm": 11.0,
+    "duracao": "6h",
+    "local": "Serra do Quiriri",
+    "descricao": "Trilha longa com desnivel; recomendada para experientes.",
+    "imagem": "imagens/trilha-13.webp",
+    "destaque": false
+  },
+  {
+    "id": 14,
+    "nome": "Vila Nova Rural",
+    "dificuldade": "Facil",
+    "distanciaKm": 2.8,
+    "duracao": "1h15",
+    "local": "Vila Nova",
+    "descricao": "Percurso leve em area periurbana, boa para iniciantes.",
+    "imagem": "imagens/trilha-14.webp",
+    "destaque": false
+  },
+  {
+    "id": 15,
+    "nome": "Trilha do Enxaimel",
+    "dificuldade": "Facil",
+    "distanciaKm": 2.2,
+    "duracao": "1h",
+    "local": "Centro Historico",
+    "descricao": "Rota cultural a pe passando por casas de estilo germanico.",
+    "imagem": "imagens/trilha-15.webp",
+    "destaque": false
+  },
+  {
+    "id": 16,
+    "nome": "Boa Vista Estendida",
+    "dificuldade": "Moderada",
+    "distanciaKm": 7.0,
+    "duracao": "3h30",
+    "local": "Morro da Boa Vista",
+    "descricao": "Versao mais longa do circuito do mirante, com trechos de mata.",
+    "imagem": "imagens/trilha-16.webp",
+    "destaque": false
+  }
+]
